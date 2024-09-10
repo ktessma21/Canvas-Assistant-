@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import SignupLoginForm from './SignupLoginForm';
+import './style.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+// Floating Books JSON
+const books = [
+  { imageUrl: 'book1.png', width: 50, height: 50 },
+  { imageUrl: 'book2.png', width: 50, height: 50 },
+  { imageUrl: 'book3.png', width: 50, height: 50 }
+];
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function App() {
+  useEffect(() => {
+    const bookContainer = document.getElementById('root');
+    books.forEach((book, index) => {
+      const bookElement = document.createElement('div');
+      bookElement.className = 'floating-book';
+      bookElement.style.backgroundImage = `url(${book.imageUrl})`;
+      bookContainer.appendChild(bookElement);
+    });
+  }, []);
+
+  return <SignupLoginForm />;
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

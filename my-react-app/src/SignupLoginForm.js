@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import './SignupLoginForm.css'; 
+import React, { useState } from 'react';
+import './style.css'; 
 import universities from './data/universities_with_lms_urls1.json'; // Import the JSON data
 
 function SignupLoginForm() {
-  const [isNewUser, setIsNewUser] = useState(true);
+  const [isNewUser, setIsNewUser] = useState(true);   // USING THE HOOK 
   const [formData, setFormData] = useState({
     preferredName: '',
     universityName: '',
@@ -28,6 +28,7 @@ function SignupLoginForm() {
   return (
     <div className="form-container">
       <div className="form-background">
+       
         <div className="form-box">
           <h2>{isNewUser ? 'Sign Up' : 'Login'}</h2>
           <form onSubmit={handleSubmit}>

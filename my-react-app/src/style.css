@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fallback color */
+    background-image: url('../public/bg_img.jpg'); /* Use the image from the public directory */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    color: #ffffff; /* Normal letters in white */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Behind the form */
+  }
+  
+  .form-container {
+    position: relative;
+    z-index: 1; /* On top of particles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-background {
+    background-color:#a28e8e94;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .form-box h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #ffffff; /* Headings in #4672FC */
+  }
+  
+  input, select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #333;
+    color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  .submit-button {
+    background-color: #4672FC;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #3451d5;
+  }
+  
+  .floating-book {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 0;
+    left: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: float-up 8s infinite ease-in-out;
+  }
+  
+  @keyframes float-up {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+  
+  
