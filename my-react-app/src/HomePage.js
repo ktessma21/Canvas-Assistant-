@@ -15,7 +15,7 @@ function HomePage({ userName }) {
   };
 
   const handleReload = () => {
-    window.location.reload();   // TODO 1: probably this is not what i want to reload so come and fix it. 
+    window.location.reload();   // TODO 1: probably this is not what i want to reload so come and fix it.
   };
 
   const handleCalendarClick = (calendarType) => {
@@ -31,7 +31,8 @@ function HomePage({ userName }) {
       </header>
 
       <main>
-        <h2 className="user-name">{userName}</h2>
+        <h2 className="user-name">{userName}</h2>  
+         {/* here is where it is error prone  */}
 
         <div className="this-week">
           <h3 onClick={handleToggleExpand} className="expandable-header">

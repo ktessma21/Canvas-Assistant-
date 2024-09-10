@@ -1,27 +1,21 @@
-import React, { useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // Import from 'react-dom/client' instead of 'react-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SignupLoginForm from './SignupLoginForm';
+import HomePage from './HomePage';
 import './style.css';
 
-// Floating Books JSON
-const books = [
-  { imageUrl: 'book1.png', width: 50, height: 50 },
-  { imageUrl: 'book2.png', width: 50, height: 50 },
-  { imageUrl: 'book3.png', width: 50, height: 50 }
-];
-
 function App() {
-  useEffect(() => {
-    const bookContainer = document.getElementById('root');
-    books.forEach((book, index) => {
-      const bookElement = document.createElement('div');
-      bookElement.className = 'floating-book';
-      bookElement.style.backgroundImage = `url(${book.imageUrl})`;
-      bookContainer.appendChild(bookElement);
-    });
-  }, []);
-
-  return <SignupLoginForm />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<SignupLoginForm />} />
+        <Route path="/home" element={<HomePage userName="John Doe" />} /> {/* Replace "John Doe" with actual user name */}
+      </Routes>
+    </Router>
+  );
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// Use createRoot instead of ReactDOM.render
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
