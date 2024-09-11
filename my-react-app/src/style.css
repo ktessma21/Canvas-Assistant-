@@ -23,8 +23,8 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  padding: 10px;
+  max-width: 1000px;
+  padding: 40px 100px;
   background-color: rgba(162, 142, 142, 0.58);
   color: white;
   position: fixed; /* Keeps header fixed at the top */
@@ -38,7 +38,7 @@ body {
 /* Form and Container Styles */
 .form-container, .home-page {
   position: relative;
-  z-index: 1; /* On top of particles */
+  z-index: 2; /* On top of particles */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -190,4 +190,83 @@ input, select {
   height: 40px;
   margin: 0 10px;
   cursor: pointer;
+}
+
+
+/* Using Bootstrap  */
+/* style.css */
+
+/* Custom Background for the Form */
+/* style.css */
+
+/* style.css */
+/* style.css */
+/* style.css */
+
+/* Custom Background for the Form Container */
+.form-background {
+  background-color: #B2984E; /* Background color for the form container */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  width: 400px; /* Fixed width to ensure both forms are the same size */
+  height: auto; /* Allow height to adjust based on content */
+  text-align: center;
+  padding: 20px;
+  margin-top: 0;
+  z-index: 2; /* Ensure it is above other elements */
+  color: white; /* Font color for text inside the form */
+}
+
+/* Center the Form on the Page */
+.d-flex {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Input Field and Select Customization */
+.form-control,
+.form-select {
+  background-color: #333333; /* Background color for inputs and select dropdown */
+  color: #ffffff; /* Font color for input text */
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: calc(100% - 20px); /* Ensure input fields have consistent width */
+}
+
+/* Input Field Text Color When Focused or Filled */
+.form-control:focus,
+.form-select:focus,
+.form-control:valid,
+.form-select:valid {
+  background-color: #333333 !important; /* Keep the background color consistent */
+  color: #ffffff; /* Ensure text color stays white */
+  box-shadow: none; /* Remove any default Bootstrap focus shadow */
+  outline: none; /* Remove the default outline */
+}
+
+/* Placeholder Text Color */
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #ffffff; /* Placeholder text color */
+  opacity: 0.7; /* Slight transparency for the placeholder */
+}
+
+/* Button Customization */
+.btn-primary {
+  background-color: #5573FC; /* Button background color */
+  color: white; /* Button font color */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  width: 100%; /* Make button width consistent with inputs */
+}
+
+.btn-primary:hover {
+  background-color: #3451d5; /* Darker shade for hover effect */
 }

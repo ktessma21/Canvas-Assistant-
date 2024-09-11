@@ -31,8 +31,8 @@ function HomePage({ userName }) {
       </header>
 
       <main>
-        <h2 className="user-name">{userName}</h2>  
-         {/* here is where it is error prone  */}
+        {/* <h2 className="user-name">{userName}</h2>  
+         here is where it is error prone  */}
 
         <div className="this-week">
           <h3 onClick={handleToggleExpand} className="expandable-header">
